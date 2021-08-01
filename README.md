@@ -21,14 +21,19 @@ go get -d -v github.com/paddlepaddle/paddle/paddle/fluid/inference/goapi@${COMMI
 您可以选择直接下载[paddle_inference_c](https://github.com/PaddlePaddle/Paddle-Inference-Demo/blob/master/docs/user_guides/download_lib.md)预测库，或通过源码编译的方式安装，源码编译方式参考官网文档，注意这里cmake编译时打开`-DON_INFER=ON`,在编译目录下得到`paddle_inference_c_install_dir`。
 
 
-`
+``
 wget https://paddle-inference-lib.bj.bcebos.com/mac/2.1.1/cpu_avx_openblas/paddle_inference_c_install_dir.tgz
+
 tar -zxvf paddle_inference_c_install_dir.tgz
+
 sudo cp -r paddle_inference_c_install_dir/paddle/lib/* /usr/local/lib/
+
 sudo cp -r paddle_inference_c_install_dir/paddle/include/* /usr/local/include/
+
 sudo ldconfig
+
 rm -rf paddle_inference_c_install_dir
-`
+```
 
 4. 软链
 
