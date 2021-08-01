@@ -23,14 +23,11 @@ import (
 
 func cvtPDBoolToGo(b C.int8_t) bool {
 	var cFalse C.int8_t
-	if b != cFalse {
-		return true
-	}
-	return false
+	return b != cFalse
 }
 
 func cvtGoBoolToPD(b bool) C.int8_t {
-	if b == false {
+	if !b {
 		return 0
 	}
 	return 1
